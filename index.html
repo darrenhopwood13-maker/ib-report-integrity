@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- instructBrain branded document. Family rule: shared navy surfaces, white "instruct"
+     with the product name in the product colour, ONE accent token (#57FF00 Laser Green).
+     Reference: IB-RPT-001. One A4 page, by intent - if it spills, trim copy, do not shrink type. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>instructBrain - Report integrity, October 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#213c73; --navy-deep:#1e3667; --ink:#020617;
+    --green:#57ff00; --green-deep:#3fbb00; --amber:#f59e0b;
+    --paper:#ffffff; --mist:#f4f6f9; --line:#e3e8ef; --muted:#5b6b85;
+  }
+  *{box-sizing:border-box;}
+  @page{ size:A4; margin:9mm 11mm; }
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink); background:var(--paper);
+    font-size:9pt; line-height:1.42;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  .wrap{max-width:900px;margin:0 auto;}
+
+  .masthead{background:linear-gradient(135deg,var(--ink) 0%,var(--navy-deep) 55%,var(--navy) 100%);
+    color:#fff;padding:15px 22px 13px;border-radius:9px 9px 0 0;}
+  .wordmark{font-family:'Audiowide',sans-serif;font-size:16pt;letter-spacing:.3px;
+    color:#fff;margin:0 0 3px;line-height:1.1;}
+  .wordmark i{font-style:normal;color:var(--green);}
+  .eyebrow{font-size:7.2pt;letter-spacing:2.2px;text-transform:uppercase;
+    color:var(--green);font-weight:600;margin:0 0 8px;}
+  .masthead h1{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:14pt;
+    margin:0 0 3px;line-height:1.2;letter-spacing:-.2px;}
+  .masthead .sub{color:#b9c6dd;font-size:8.4pt;margin:0;}
+  .metabar{display:flex;gap:20px;flex-wrap:wrap;margin-top:9px;
+    border-top:1px solid rgba(255,255,255,.16);padding-top:7px;}
+  .metabar div{font-size:7.6pt;color:#9fb0cc;}
+  .metabar b{display:block;color:#fff;font-weight:600;font-size:8.4pt;margin-top:1px;}
+
+  .band{background:var(--paper);border-left:1px solid var(--line);border-right:1px solid var(--line);}
+  .sec{padding:11px 22px 10px;border-bottom:1px solid var(--line);}
+  .sec:last-child{border-bottom:none;}
+  h2{font-family:'Inter Tight',sans-serif;font-size:10.6pt;font-weight:700;
+    color:var(--navy);margin:0 0 2px;letter-spacing:-.1px;}
+  .kicker{color:var(--muted);font-size:8.2pt;margin:0 0 7px;}
+  p{margin:0 0 5px;}
+
+  .step{display:flex;gap:9px;margin:0 0 6px;page-break-inside:avoid;}
+  .step .n{flex:0 0 19px;height:19px;border-radius:50%;background:var(--navy);color:#fff;
+    font-family:'Inter Tight',sans-serif;font-weight:700;font-size:8.4pt;
+    display:flex;align-items:center;justify-content:center;}
+  .step .b{flex:1;}
+  .step .b b{font-family:'Inter Tight',sans-serif;font-weight:700;color:var(--navy-deep);font-size:9.2pt;}
+  .step .b p{margin:0;color:#2f3d52;}
+  .step .b p b{font-family:'Inter',sans-serif;font-weight:600;color:#4a5a73;font-size:9pt;}
+
+  .callout{border-radius:7px;padding:8px 12px;margin:7px 0 0;
+    page-break-inside:avoid;font-size:8.6pt;}
+  .callout b{font-family:'Inter Tight',sans-serif;}
+  .callout p{margin:0 0 4px;} .callout p:last-child{margin:0;}
+  .win{background:#eefbe8;border-left:4px solid var(--green-deep);}
+  .warn{background:#fff8ec;border-left:4px solid var(--amber);}
+  a{color:var(--navy);text-decoration:underline;}
+
+  .foot{background:var(--ink);color:#8fa2bd;border-radius:0 0 9px 9px;
+    padding:10px 22px;font-size:7.4pt;display:flex;align-items:center;gap:14px;}
+  .foot .txt{flex:1;}
+  .foot b{color:#fff;}
+  .foot .rule{height:2px;background:var(--green);width:38px;margin:0 0 6px;border-radius:2px;}
+  .foot p{margin:0 0 2px;}
+  .foot img{width:58px;height:58px;border-radius:5px;background:#fff;padding:2px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="wordmark">instruct<i>Brain</i></div>
+    <p class="eyebrow">Report integrity &middot; October 2026</p>
+    <h1>Four defects in the report workflow, fixed</h1>
+    <p class="sub">What was wrong with the report itself, what it does now, and what it means for a report already sent to a client.</p>
+    <div class="metabar">
+      <div>Prepared for<b>Darren Hopwood</b></div>
+      <div>Date<b>12 October 2026</b></div>
+      <div>Status<b>Live</b></div>
+      <div>Reference<b>IB-RPT-001</b></div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="sec">
+      <h2>Not a new feature: four defects in how a report behaves</h2>
+      <p class="kicker">Found in a read-through of the report workflow before launch, re-checked against the code. Two of them let the product make a promise it could not keep to a client. All four are fixed and live, plus the fifth change that stops an issued report moving under a client's feet.</p>
+
+      <div class="step"><div class="n">1</div><div class="b">
+        <b>A share link no longer serves an unpublished report.</b>
+        <p><b>Was:</b> reopening a published report to correct one line put it back to in-review, and everyone already holding a link could read the working copy, with nothing on the page saying so. <b>Now:</b> nothing outside your organisation reads a report that is not published - one rule, in one place, every report.</p>
+      </div></div>
+
+      <div class="step"><div class="n">2</div><div class="b">
+        <b>Allocating a trade no longer counts as approving the wording.</b>
+        <p><b>Was:</b> publishing is blocked until items are confirmed by a person, but both allocation paths were writing the confirmation stamp - so sending an item to a bricklayer satisfied that gate, and a report could go out asserting every item had been read when nobody had read it. <b>Now:</b> allocation writes only the trade and the date, and the record calls it allocation. Editing the wording, remedy, severity, grade, cause or location withdraws the approval, so it must be given again deliberately.</p>
+      </div></div>
+
+      <div class="step"><div class="n">3</div><div class="b">
+        <b>A client email for an unpublished report is refused, not sent empty.</b>
+        <p><b>Was:</b> the send did not check status, so pre-issue it lost its share link and its PDF and went out anyway. <b>Now:</b> it refuses, and says what to do instead. An empty envelope to a client is worse than a refusal.</p>
+      </div></div>
+
+      <div class="step"><div class="n">4</div><div class="b">
+        <b>The close-out email link goes somewhere a supplier can open.</b>
+        <p><b>Was:</b> it pointed at an in-app page needing a sign-in, which no subcontractor has; and a trade work pack for an unpublished report went out looking like the finished client report. <b>Now:</b> it uses the same no-sign-in token page the trade pack uses, says so when no such page exists rather than printing a dead link, and a work pack for an unpublished report is labelled <b>DRAFT WORK PACK</b> on the face of it and in the subject line.</p>
+      </div></div>
+
+      <div class="step"><div class="n">5</div><div class="b">
+        <b>A share link serves the version it was minted against.</b>
+        <p><b>Was:</b> a link read the live report, so re-issuing could quietly change what an already-sent link showed. <b>Now:</b> it is pinned to the frozen version it was created from. Links created earlier carry no pin and keep resolving to the current version, so nothing already sent changes behaviour.</p>
+      </div></div>
+
+      <div class="callout win">
+        <p><b>Live and verified, 12 October 2026.</b> Published to <a href="https://instructbrain.com">instructbrain.com</a>. Build clean, type checker clean, <b>917 automated tests pass</b>, no lint errors. The share-link change was checked against the real data: 16 links exist, all 16 unpinned, none pointing at a missing version, none orphaned from its report.</p>
+      </div>
+      <div class="callout warn">
+        <p><b>What this does not claim.</b> The fixed behaviours are covered by automated tests and the code is live, but each was not separately exercised end to end on a live report in front of a client - the confirmation gate, for instance, is tested rather than demonstrated by deliberately issuing an unconfirmed report. Existing share links are unaffected by design and were checked at the data level, not opened one by one.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="txt">
+      <div class="rule"></div>
+      <p><b>instructBrain</b> &mdash; report integrity, October 2026. Reference IB-RPT-001, issued 12 October 2026.</p>
+      <p>Prepared for Darren Hopwood by his agent. Code on main at 731ff70, deployed as 7b3993bc.</p>
+      <p style="margin-top:4px;">Internal record of changes to the report workflow. Not a client-facing document; it carries no client or project information.</p>
+    </div>
+    <img src="QR.png" alt="QR code for instructbrain.com">
+  </div>
+
+</div>
+</body>
+</html>
